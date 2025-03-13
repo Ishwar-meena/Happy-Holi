@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi Roza!</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            color: rgb(22, 20, 20);
+            background-color: #ff66b2;
+        }
+        .parallax {
+            background: url('https://source.unsplash.com/1600x900/?holi,colors') no-repeat center;
+            background-size: cover;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-attachment: fixed;
+        }
+        .text {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            animation: pop 1s infinite alternate;
+        }
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        .content {
+            padding: 0px;
+            background: #ff66b2;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .image-container {
+            margin-top: 0px;
+        }
+        .image-container img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        audio {
+            display: none;
+        }
+        button{
+            padding: 8px 6px;
+            border: none;
+            border-radius: 4px;
+            background-color: #7e194b;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <h1 class="text">Happy Holi, Roza!✨🌸</h1>
+    </div>
+    <div class="content">
+        <p>"Call Me Kundan From Raanjhana Beacuse,<br>Kaun Fir Se Mehnat Kre Dil Lagane Ko, <br>Dil Toodwane Ko, <br>Ab Sala Mood Nhi hei".</p>
+        <div class="image-container">
+            <img src="assets/Holi.jpg" alt="Holi Celebration">
+        </div>
+    </div>
+    <audio id="holiAudio" loop autoplay>
+        <source src="assets/Holi.mp3" type="audio/mpeg" autoplay>
+    </audio>
+    <button onclick="document.getElementById('holiAudio').play()">Play Music</button>
+</body>
+</html>
